@@ -1,0 +1,177 @@
+body,hr{
+	margin: 0px;
+	padding: 0px;
+	background-color: #2e5cad;
+}
+
+.header{
+	position: relative;
+	width: 100%;
+	height: 2.72rem;
+	color: #fff;
+	z-index: 4;
+}
+.header h1{
+	font-size: 0.62rem;
+	line-height: 2.72rem;
+	text-align: center;
+	font-weight: normal;
+	overflow: hidden;
+}
+
+/*.header hgroup{
+	position: absolute;
+	width: 100%;
+	top: 0;
+}
+.head-left{
+	font-size: 20px;
+	float: left;
+	text-align: center;
+}*/
+
+.info-container{
+	/*position: relative;*/
+	margin:0 0.46rem;
+	background-color: #fff;
+	border-radius: 0.37rem;
+}
+.radius{
+	position: absolute;
+	top:-1.2rem;
+	left:40%;
+	width: 2.96rem;
+	height: 2.5rem;
+    border-radius:50%;
+    z-index: 1;
+    background-color: #2e5cad;
+}
+.no{
+	height: 4.48rem;
+	position: relative;
+}
+.air_num{	
+	position: absolute;
+	top: 2rem;
+	padding:0 1.11rem;
+	width: 100%;
+	height: 3.22rem;
+	
+}
+.ui_num_left{
+	margin-top: 0 auto;
+	float: left;
+	width: 50%;
+}
+.ui_num_right{
+	position: absolute;
+	right: 3rem;
+	float: left;
+/*	width: 80%;*/
+}
+.air_num h4{
+	margin: 0;
+	font-size: 0.83rem;
+}
+.air_num p{
+	margin: 0;
+	font-size: 0.425rem;
+}
+.state{
+	padding: 0;
+	height: 3.68rem;
+	background-color: #98cd00;
+	width: 100%;
+	
+}
+.state_left{
+	width: 5.57rem;
+	height: 100%;
+	line-height: 3.68rem;
+	background: url(line.png) right center no-repeat;
+	
+}
+.state_right{
+	float: right;
+}
+.state p{
+	text-align: center;
+	
+	font-size: 1.13rem;
+	margin: 0 auto;
+	/*border-right: solid #fff;*/
+	
+	color: #fff;
+	z-index: 3;
+	}
+.info{
+	height: 12.53rem;
+	padding:0 1.11rem;
+}
+.airport{
+	font-size: 0.74rem;
+	height: 2.68rem;
+	line-height: 2.68rem;
+	/*margin: 60px;*/
+}
+.airport_left,.text1_left,.text2_left,.text3_left{
+	float: left;
+}
+.airport_right,.text1_right,.text2_right,.text3_left{
+	float: right;
+}
+.time{
+	height: 3.88rem;
+	display: flex;
+	Flex-flow:column;
+}
+.text1{
+  font-size: 0.61rem;	
+}
+.text2{
+	font-size: 1.27rem;
+}
+.text3{
+	font-size: 0.53rem;
+}
+
+.arrive_info{
+	height: 3.20rem;
+	list-style: none;
+	overflow: hidden;
+}
+.arrive_info li{
+	float: left;
+	width: 25%;
+	
+}
+.arrive_info  dl{
+	margin: 0rem;
+}
+.arrive_info dd:first-child{
+	font-size: 0.52rem;
+}
+
+.arrive_info  dd{
+	/*text-align: center;*/
+	padding:0.33rem 0;
+	margin: 0;
+	font-size: 0.48rem;
+}
+.last_num{
+	line-height: 2.59rem;
+    width: 100%;
+	height: 2.59rem;
+	list-style: none;
+	font-size: 0.66rem;
+}
+.last_num_name{
+	float: left;
+}
+.last_num_state{
+	float: right;
+	color: #98cc00;
+}
+.zj{
+	height: 250px;
+}
