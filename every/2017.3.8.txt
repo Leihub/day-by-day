@@ -1,0 +1,14 @@
+1.学习git，2.学习css
+心得：github上的开源项目可以先fork下来然后clone自己做修改再提交到自己的仓库，可以pull request代码给官方。
+配置git别名：git config -- global alias。可以简化git命令。在提交某些项目时候，有些配置文件不用必须提交，可以设置忽略特殊文件，创建.gitignore文件。
+css：flex布局主要用于列表左右进行伸缩排列。Flex布局要有外层盒子加里面的伸缩项目。设置display：flex。Flex-flow控制伸缩项目的伸缩方式，row由左到右，column由上到下。Wrap 当一行宽度不足自动开始下一行显示。
+     EM单位的好处：在响应式设计中，可以通过改变父元素的size就能改变整个布局的大小。
+     box-shadow的基本用法：box-shadow：offsetx，offsety，blur，spread，color，position。
+     Offsetx：X轴的偏移量，正数表示在右边，负数在左边
+     Offsety：Y轴的偏移量，正数表示在下边，负数在上边
+     Blur：模糊程度。越大越模糊
+     Spread：设置阴影大小，相当于阴影宽度。
+     Color：颜色，支持常用色值，十六进制，rgb，rgba等单位。
+     Position：默认是外部阴影，设置inset则为内部阴影。
+     Spread跟border-radius的关系：当border-radius给出固定值，spread值越大，border-radius的值就越大，当spread<0时，border-radius会变小。
+box-shadow配合transform 可以做出很多特效。还没有研究到transform。

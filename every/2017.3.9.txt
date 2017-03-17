@@ -1,0 +1,12 @@
+1.学习css 2.学习react，了解grunt 3.扒网站
+心得：css的伪类和伪元素的区别：两者都是给某些选择器添加特殊效果。伪类是给选择器添加一个类达到添加样式的效果。伪元素是给选择器添加了一个元素再给元素添加的样式。
+常见伪类：:active,:focus,：hover，：link，:visited
+常见伪元素：:before,:after。
+Transform对元素进行旋转、缩放、移动或者倾斜。Transform属性值：translate，rotate。Translate（x，y）用于平移。Rotate旋转给定角度。Scale（）放大或者缩小，给定宽度和高度参数，eg scale（2,4）。
+react：主要用于构建UI。 不是一个MVC框架，侧重UI，就是view层。
+主要原理：1 .virtual dom 虚拟dom。通过virtual dom 去更新真实的dom，react有个diff算法，更新虚拟dom并不保证马上影响真实dom 等到事件循环结束利用diff算法计算出最小的步骤更新真实的dom。2. Components 组件。在dom树上的节点被称为元素，在虚拟dom上称为组件。
+State和render。State属性包含定义组件所需要的一些数据，当数据发生变化时，将会调用render重现渲染，这里只能通过提供的setstate方法更新数据。
+jsx语法：遇到<就html规则解析，遇到{就用js规则解析。
+扒网站：扒网站也不好扒，用扒下来的css文件跟在线的文件有点区别，还有就是自适应的代码找了很久，原来是用的js写的。不是简单的设置<meta name="viewport" content="width=device-width, initial-scale=1.0">。
+
+

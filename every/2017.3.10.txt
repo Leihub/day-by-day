@@ -1,0 +1,9 @@
+1.扒网站，2.学grunt 3.看jquery的gruntfile
+心得：
+Grunt 主要用来写一些task 能一次性完成检测，压缩，合并等功能。
+Gruntfile 主要分为几个部分：
+1.wrap 函数：module.export = function (){};
+2. 初始化configuration对象,主要在里面加入任务对象,grunt.initconfig({pkg: grunt.file.readJSON( "package.json" ),})
+3.加载所需要的grunt插件grunt.loadTasks( "build/tasks" )；
+4.设置task，命令行输入task名就能执行任务。grunt.registerTask().
+
