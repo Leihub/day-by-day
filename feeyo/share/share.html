@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
 		<title></title>
-		<link rel="stylesheet" href="share.css" />
+		<link rel="stylesheet" href="share	.css" />
 		<script>
 			(function (doc, win) {
 		        var docEl = doc.documentElement,
@@ -56,18 +56,24 @@
 				<p class="air_name_en">Eastern Airlines</p>
 				</div>
 				<div class="ui_num_right">
-					<img src="mu.png" style="width: 100%;"/>
+					<img src="mu.png" style="width:1.75rem; height: 1.75rem"/>
 				</div>
 			</div>
 			</div>
 			<div class="state">
 				<div class="state_left">
-					<p>起飞 </p>
-					
+					<div class="ui_state_left">
+						<p class="state_text">起飞 </p>
+					</div>
 				</div>
 				<div class="state_right">
+					<div class="right_top"></div>
+					<div class="right_next">
+						<p class="remain_text">比计划提早5分钟到达</p>
+					</div>
+					<div class="fj"><img src="小飞机.png" style="width: 1rem; height: 1rem;"/></div>
 					
-	     		 <hr style="margin:0px;height:1px;border:0px;background-color:#D5D5D5;color:#D5D5D5;"/>
+	     		 
 				</div>
 			</div>
 			<div class="info">
@@ -90,20 +96,20 @@
 						<div class="text3_right">计划3月14日09:40</div>
 					</div>
 				</div>
-				<div class="icon"></div>
+				<div class="icon"><img src="矢量智能对象.png" style="width: 1.2rem; height: 1.2rem;"/></div>
 				</div>
 				<div class="more_info">
 					<div class="arrive_info">
 						<li>
 							<dl>
 								<dd>值机柜台</dd>
-								<dd>H,J,K,L,M..</dd>
+								<dd onclick="modelText()">H,J,K..</dd>
 							</dl>	
 						</li>
 						<li>
 							<dl>
 								<dd style="text-align: center;">登机口</dd>
-								<dd style="font-size: 0.69rem;text-align: center;">137</dd>
+								<dd style="text-align: center;" onclick="modelText()">137</dd>
 							</dl>
 						</li>
 						<li>
@@ -125,12 +131,95 @@
 						<li class="last_num_state">到达  &gt;</li>
 					
 					</div>				
-				</div>
-					<hr />
 			</div>
+  
+		</div>
+		</div>
+		
+		<script type="text/javascript">
+			var ad ;
+				function hgdu (){
+					var bg=document.createElement('div');
+					bg.id='bg';
+					var div = document.createElement('div');
+					div.id = "boune";
+					var he=document.createElement('p');
+					he.innerHTML='办理值机截至时间:'
+					he.className = "he"
+					div.appendChild(he);
+					var scd=document.createElement('div');
+					scd.className = 'scd';
+					var airinfo=document.createElement('p');
+					airinfo.className = 'airinfo';
+					airinfo.innerText='航班当日 07:45';
+					scd.appendChild(airinfo);
+					var zj=document.createElement('p');
+					zj.className = "zj"
+					zj.innerText='值机柜台：';
+					scd.appendChild(zj);
+					div.appendChild(scd);
+					var ls=document.createElement('div');
+					ls.className = 'ls';
+					var num=document.createElement('p');
+					num.innerText='B';
+					ls.appendChild(num);
+					var tt=document.createElement('p');
+					tt.className = 'tt';
+					tt.innerText='从20号门进入离值机柜台较近';
+					ls.appendChild(tt);
+					div.appendChild(ls)
+					var btn = document.createElement('div');
+					btn.className = 'btn';
+					btn.innerHTML = '<button onclick=\'closeModel()\'>确定</button>';
+					div.appendChild(btn);
+					document.body.appendChild(bg);
+					document.body.appendChild(div);
+					}
+//				function downLoad(){
+//					var div = document.createElement('div');
+//					div.id = "boune";
+//					div.innerHTML = '<p>download feeyo</p><button style=\'width:11.34rem;color:#a5c8fc;\'>确定</button><button style=\'width:11.34rem;color:#a5c8fc;\' onclick=\'closeModel()\'>取消</button>';
+//					document.body.appendChild(div);
+//					var node = document.createElement('link');
+//					node.rel = 'stylesheet';
+//					node.href = 'boune.css';
+//					document.getElementsByTagName('head')[0].appendChild(node);
+//					console.log(div)
+//					
+//				}
+				function modelText(){
+//					var node = document.createElement('link');
+//					node.rel = 'stylesheet';
+//					node.href = 'boune.css';
+//					document.getElementsByTagName('head')[0].appendChild(node);
+					if(!ad){
+						ad= 'a';
+					setTimeout("hgdu()",100);
+						console.log(ad)
+					}
+					
+//showDiv();
+					
+				}
+				function closeModel(){
+					var child=document.getElementById('boune');
+					child.parentNode.removeChild(child);
+//					document.body.removeChild(bg);
+					ad = undefined;
+					console.log(ad);
+				
+				}
+//				function showDiv(){
+//					 document.getElementById("boune").style.display ="block";
+//				}
+				var a = document.getElementsByClassName('last_num');
+//				function aa(){
+//					return modelText();
+//				}
+				
 
-			<div class="zj"></div>
-		</div>
-		</div>
+	
+	
+		</script>
 	</body>
 </html>
