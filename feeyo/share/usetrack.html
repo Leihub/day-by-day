@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="base.css" />
+		<link rel="stylesheet" type="text/css" href="usetrack.css" />
+
+		<title>用车详情</title>
+		<script src="rem.js"></script>
+
+		<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=a78c809195bb2a6124a930a1e0f1eb02"></script>
+		<script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+		<style type="text/css">
+			/*#panel {
+				position: fixed;
+				background-color: white;
+				max-height: 90%;
+				overflow-y: auto;
+				bottom: .25rem;
+				right: .25rem;
+				width: 7rem;
+				height: 10rem;
+				width: 100%;
+			}
+			*/
+			/*#container {
+				height: 30rem;
+				width: 100%;*/
+			}
+		</style>
+	</head>
+
+	<body class="track">
+		<p class="title">用车详情</p>
+		<div class="main_container">
+			<p class="yuan_icon"></p>
+			<div class="hd">
+				<div class="state">
+					<p class="tk">建议用车前联系司机</p>
+					<p class="yes">派车成功</p>
+				</div>
+				<div class="info">
+					<div class="left">
+						<p class="cn">航班 </p>
+						<p class="num">MU554</p>
+					</div>
+					<div class="right ">
+					 <div class="aa ">
+					<p class="cn ">用车时间:</p>
+					<p class="num " style="text-align: right; ">07:00</p>
+					</div>
+						<p class="text ">航班晚点，司机将免费等待</p>
+					</div>
+				
+				</div>
+			</div>
+			<div class="sj ">
+				<img src="用车详情_03.png " alt="logo " class="sj_logo "/>
+				<div class="nm ">
+					<p class="sjn ">李国昌</p>
+					<p class="sjt ">荣威550</p>
+					<p class="sjt ">沪GY7180</p>
+				</div>
+				<div class="ph ">
+					<p>携程易通提供</p>
+					<img src="用车详情_06.png "/>
+				</div>
+			</div>		
+			<div class="dt " id="container ">
+				<img src="用车详情_0).png"/>
+				<p>上海浦东机场</p>
+				<img src="用车详情_14.png"/>
+				<p>迪士尼</p>
+			</div>	
+			<img src="用车详情_17.png"/ style="width: 100%;" onclick="">  <!--跳转到地图详情页-->
+		</div>   
+	</div>
+		<!--<script type="text/javascript ">
+    	var map = new AMap.Map('container', {
+	        resizeEnable: true,
+	        zoom:12,
+	        center: [121.47, 31.23]
+	    });
+	    var driving = new AMap.Driving({
+        map: map,
+        panel: "panel "
+    }); 
+        driving.search([
+        {keyword: '上海浦东机场',city:'上海'},
+        {keyword: '迪士尼',city:'上海'}
+    ]);
+    </script>-->
+ 	
+	</body>
+</html>

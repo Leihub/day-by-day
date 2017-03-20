@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="base.css" />
+		<link rel="stylesheet" type="text/css" href="gt.css" />
+		<title></title>
+		<script>
+			(function(doc, win) {
+				var docEl = doc.documentElement,
+					isIPhone = window.navigator.appVersion.match(/iphone/gi),
+					fontSize, scale,
+					platform = navigator.platform;
+
+				function recalc() {
+					var clientWidth = docEl.clientWidth; //window.document.documentElement.getBoundingClientRect().width
+					var dpr = window.devicePixelRatio;
+					var justMobile = !/win32/i.test(platform); //只限移动端，pc不缩放
+
+					// iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案 ,  其他设备下，仍旧使用1倍的方案
+					if(!(isIPhone && justMobile)) {
+						dpr = 1;
+						clientWidth = clientWidth ? clientWidth : (window.screen.width || 360);
+					}
+
+					//如果dpr大于1， 都以2倍方案缩放，尽量避免算出小数
+					scale = 1 / (dpr > 1 ? 2 : dpr);
+					fontSize = 20 * (clientWidth / 320) / scale;
+
+					fontSize = (fontSize > 54) ? 54 : fontSize;
+
+					docEl.style.fontSize = fontSize + 'px';
+					docEl.setAttribute('data-dpr', dpr);
+
+					//设置viewport
+					var viewport = document.querySelector('meta[name="viewport"]');
+					var viewport_content = 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no';
+
+					viewport && viewport.setAttribute('content', viewport_content);
+				};
+				recalc();
+			})(document, window);
+		</script>
+	</head>
+
+	<body class="gt_share">
+		<p class="title">T359</p>
+		</div>
+		<div class="ct">
+			<div class="name">
+				<div class="radius"></div>
+				<div class="left">
+					<img src="gt1.png" class="gt_icon" />
+					<div class="text">
+						<p class="gt-en">中国铁路高速</p>
+						<p class="gt-ch">China Railway High-apeed</p>
+					</div>
+				</div>
+				<div class="right">
+					<p class="time">总乘车时长:7小时5分钟</p>
+
+				</div>
+				<div class="date">
+					<p class="date_right">03/09 星期四</p>
+					<p class="date_left">03/10 星期五</p>
+				</div>
+			</div>
+			<div class="zj">
+				<div class="dd">
+					<p class="tt">17:00</p>
+					<p class="pp">西安</p>
+				</div>
+				<div class="icon">
+					<img src="gt2.png" />
+				</div>
+				<div class="rr">
+					<p class="tt">21:00</p>
+					<p class="pp">合肥</p>
+				</div>
+			</div>
+			<div class="tz">
+				<p>列车经停站：</p>
+			</div>
+			<div class="jt">
+				<div class="fs">
+					<ul>
+						<li>3分钟</li>
+						<li>3分钟</li>
+						<li>3分钟</li>
+						<li>13分钟</li>
+					</ul>
+				</div>
+				<div class="sd"></div>
+				<div class="circle">
+					<img src="circle1.png"/ class="red">
+					<img src="circle2.png"/ class="c2">
+					<img src="c3.png"/ class="c3">
+					<img src="c4.png"/ class="c4">
+				</div>
+				<div class="th">
+					<dl>
+						<dt>10:52</dt>
+						<dd>信阳</dd>
+					</dl>
+					<dl>
+						<dt>11:20</dt>
+						<dd>息县</dd>
+					</dl>
+					<dl>
+						<dt>20:10</dt>
+						<dd>落山</dd>
+					</dl>
+					<dl>
+						<dt>22:00</dt>
+						<dd>信阳</dd>
+					</dl>
+				</div>
+			</div>
+			
+		
+		</div>
+		</div>
+	</body>
+
+</html>

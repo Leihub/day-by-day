@@ -1,0 +1,27 @@
+html,body{height:100%;overflow:hidden;}
+.track{background-color:#182e56;height:100%;}
+.title{text-align:center;color:#fff;font-size:.8rem;line-height:1.8rem;}
+.main_container{background-color:#fff;margin:.4rem;border-radius:.4rem;position:relative;overflow:hidden;/*z-index:-1;*/}
+.yuan_icon{width:3rem;height:3rem;border-radius:1.5rem;background-color:#182e56;position:absolute;left:50%;margin-left:-1.5rem;top:0;margin-top:-1.5rem;}
+.hd{height: 7rem;background-color: #d1d8e0;}
+.state{height: 3.75rem;display: flex;}
+.state .tk{font-size: .5rem;color: #7e828b;margin-left: .7rem;margin-top: 2.5rem;flex: .5;}
+.state .yes{font-size: .9rem; flex: .5;text-align:right;margin-right: .7rem; margin-top: 2rem;}
+.info{height: 3rem;margin: 0 .7rem;border-top: solid #c2c6cf;display: flex;}
+.info .left,.info .right{flex: 2;line-height: 3;}
+.info p{float: left;}
+.info .cn{font-size: .55rem;color: #6e727b;margin-top:.5rem;margin-right: .3rem;}
+.info .num{font-size: .75rem;margin-top: .25rem;}
+.info .aa{position: absolute;right: .9rem;}
+.info .text{font-size: .5rem;color: #7e828b;float: right;position: absolute;top: 5.5rem;right: .9rem;}
+.sj{height: 4rem;width: 100%;}
+.sj .sj_logo{width: 1.7rem;height: 1.7rem;margin-left:.9rem;margin-top:1.4rem;float: left;}
+.sj .nm{float: left;margin-top: 1.4rem;margin-left: .7rem;}
+.sj .sjn{font-size:.75rem }
+.sj .sjt{font-size: .55rem;float: left;margin-right: .7rem;}
+.ph{float: right;margin-top: .5rem;}
+.ph p{font-size: .5rem;color: #7e828b;margin-right: .9rem;text-align: right; }
+.ph img{width: 1.7rem;height: 1.8rem;margin-left: .8rem;margin-top: .5rem;}
+.dt{border-top: solid #C2C6CF 1px;margin: 0 .9rem;margin-bottom: .8rem;}
+.dt p{font-size: .5rem;margin-left: 1.5rem;margin-top: .8rem;}
+.dt img{position: absolute;margin-top: .8rem;float: left;}

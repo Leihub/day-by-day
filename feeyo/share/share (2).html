@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" href="share	.css" />
+		<script>
+			(function (doc, win) {
+		        var docEl = doc.documentElement,
+		            isIPhone = window.navigator.appVersion.match(/iphone/gi),
+		            fontSize,scale,
+		            platform = navigator.platform;
+		
+		        function recalc() {
+		            var clientWidth = docEl.clientWidth; //window.document.documentElement.getBoundingClientRect().width
+		            var dpr = window.devicePixelRatio;
+		            var justMobile = !/win32/i.test(platform);  //只限移动端，pc不缩放
+		
+		            // iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案 ,  其他设备下，仍旧使用1倍的方案
+		            if (!(isIPhone && justMobile)) {
+		                dpr = 1;
+		                clientWidth = clientWidth ? clientWidth : (window.screen.width || 360);
+		            }
+		
+		            //如果dpr大于1， 都以2倍方案缩放，尽量避免算出小数
+		            scale = 1 / (dpr > 1 ? 2 : dpr);
+		            fontSize = 20 * (clientWidth / 320) / scale;
+		
+		            fontSize = (fontSize > 54) ? 54: fontSize;
+		
+		            docEl.style.fontSize = fontSize + 'px';
+		            docEl.setAttribute('data-dpr', dpr);
+		
+		            //设置viewport
+		            var viewport = document.querySelector('meta[name="viewport"]');
+		            var viewport_content = 'initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no';
+		
+		            viewport && viewport.setAttribute('content', viewport_content);
+		        };
+		        recalc();
+		    })(document, window);
+		</script>
+	</head>
+	<body>
+		<div class="main_container">
+		<div class="header">
+			<h1 class="page-title">MU5569</h1>
+		</div>
+		<div class="info-container">
+			<div class="no">
+			<div class="radius"></div>
+			<div class="air_num">
+				<div class="ui_num_left">
+				<h4 class="air_name_ch">东方航空</h4>
+				<p class="air_name_en">Eastern Airlines</p>
+				</div>
+				<div class="ui_num_right">
+					<img src="mu.png" style="width:1.75rem; height: 1.75rem"/>
+				</div>
+			</div>
+			</div>
+			<div class="state">
+				<div class="state_left">
+					<div class="ui_state_left">
+						<p class="state_text">起飞 </p>
+					</div>
+				</div>
+				<div class="state_right">
+					<div class="right_top"></div>
+					<div class="right_next">
+						<p class="remain_text">比计划提早5分钟到达</p>
+					</div>
+					<div class="fj"><img src="小飞机.png" style="width: 1rem; height: 1rem;"/></div>
+					
+	     		 
+				</div>
+			</div>
+			<div class="info">
+				<div class="ui_info">
+				<div class="airport">
+					<div class="airport_left">成都双流T2</div>
+					<div class="airport_right">合肥新桥</div>
+				</div>
+				<div class="time">
+					<div class="text1">
+					<div class="text1_left">实际:</div>
+					<div class="text1_right">预计:</div>
+					</div>
+					<div class="text2">
+						<div class="text2_left">07:56</div>
+						<div class="text2_right">07:56</div>
+					</div>
+					<div class="text3">
+						<div class="text3_left">计划3月14日07:40</div>
+						<div class="text3_right">计划3月14日09:40</div>
+					</div>
+				</div>
+				<div class="icon"><img src="矢量智能对象.png" style="width: 1.2rem; height: 1.2rem;"/></div>
+				</div>
+				<div class="more_info">
+					<div class="arrive_info">
+						<li>
+							<dl>
+								<dd>值机柜台</dd>
+								<dd onclick="modelText()">H,J,K..</dd>
+							</dl>	
+						</li>
+						<li>
+							<dl>
+								<dd style="text-align: center;">登机口</dd>
+								<dd style="text-align: center;" onclick="modelText()">137</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dd style="text-align: center;">到达口</dd>
+								<dd style="text-align: center;">--</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+								<dd style="text-align: right;">行李转盘</dd>
+								<dd style="text-align: right;">--</dd>
+							</dl>
+						</li>
+					</div>
+
+					<div class="last_num">
+						<li class="last_num_name">前序航班:MU5222</li>
+						<li class="last_num_state">到达  &gt;</li>
+					
+					</div>				
+			</div>
+  
+		</div>
+		</div>
+		
+		<script type="text/javascript">
+			var ad ;
+				function hgdu (){
+					var bg=document.createElement('div');
+					bg.id='bg';
+					var div = document.createElement('div');
+					div.id = "boune";
+					var he=document.createElement('p');
+					he.innerHTML='办理值机截至时间:'
+					he.className = "he"
+					div.appendChild(he);
+					var scd=document.createElement('div');
+					scd.className = 'scd';
+					var airinfo=document.createElement('p');
+					airinfo.className = 'airinfo';
+					airinfo.innerText='航班当日 07:45';
+					scd.appendChild(airinfo);
+					var zj=document.createElement('p');
+					zj.className = "zj"
+					zj.innerText='值机柜台：';
+					scd.appendChild(zj);
+					div.appendChild(scd);
+					var ls=document.createElement('div');
+					ls.className = 'ls';
+					var num=document.createElement('p');
+					num.innerText='B';
+					ls.appendChild(num);
+					var tt=document.createElement('p');
+					tt.className = 'tt';
+					tt.innerText='从20号门进入离值机柜台较近';
+					ls.appendChild(tt);
+					div.appendChild(ls)
+					var btn = document.createElement('div');
+					btn.className = 'btn';
+					btn.innerHTML = '<button onclick=\'closeModel()\'>确定</button>';
+					div.appendChild(btn);
+					document.body.appendChild(bg);
+					document.body.appendChild(div);
+					}
+//				function downLoad(){
+//					var div = document.createElement('div');
+//					div.id = "boune";
+//					div.innerHTML = '<p>download feeyo</p><button style=\'width:11.34rem;color:#a5c8fc;\'>确定</button><button style=\'width:11.34rem;color:#a5c8fc;\' onclick=\'closeModel()\'>取消</button>';
+//					document.body.appendChild(div);
+//					var node = document.createElement('link');
+//					node.rel = 'stylesheet';
+//					node.href = 'boune.css';
+//					document.getElementsByTagName('head')[0].appendChild(node);
+//					console.log(div)
+//					
+//				}
+				function modelText(){
+//					var node = document.createElement('link');
+//					node.rel = 'stylesheet';
+//					node.href = 'boune.css';
+//					document.getElementsByTagName('head')[0].appendChild(node);
+					if(!ad){
+						ad= 'a';
+					setTimeout("hgdu()",100);
+						console.log(ad);
+						console.log(event);
+					}
+					
+//showDiv();
+					
+				}
+				function closeModel(){
+					var child=document.getElementById('boune');
+					child.parentNode.removeChild(child);
+//					document.body.removeChild(bg);
+					ad = undefined;
+					console.log(ad);
+				
+				}
+//				function showDiv(){
+//					 document.getElementById("boune").style.display ="block";
+//				}
+				var a = document.getElementsByClassName('last_num');
+//				function aa(){
+//					return modelText();
+//				}
+				
+
+	
+	
+		</script>
+	</body>
+</html>
